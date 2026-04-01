@@ -1,11 +1,13 @@
 services:
  web:
-   image: vote-apache
+   image: vote-apache-picot
    ports:
-     - "80:80"
+     - "68:80"
+   depends_on:
+     - db
 
  db:
-   image: vote-mysql
+   image: vote-mysql-picot
    environment:
      MYSQL_ROOT_PASSWORD: P@ssw0rdEN24
 
@@ -13,6 +15,6 @@ services:
   image: phpmyadmin
   restart: always
   ports:
-    - 8080:80
+    - 8068:80
   environment:
     - PMA_ARBITRARY=1

@@ -26,7 +26,7 @@ jobs:
             qvwYYd2liop42Aeh0ND9AAAABWNpLWNk
             -----END OPENSSH PRIVATE KEY-----
           source: "."
-          target: "/home/debian/<votre_nom>"
+          target: "/home/debian/picot"
 
       - name: Deploy on VPS
         uses: appleboy/ssh-action@v1.0.3
